@@ -23,6 +23,7 @@ import com.atlassian.jira.web.FieldVisibilityManager;
 import com.atlassian.soy.renderer.SoyTemplateRenderer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 import java.util.List;
 import java.util.Map;
@@ -35,7 +36,7 @@ public class PeopleSelect extends MultiUserCFType {
     private final SoyTemplateRenderer soyTemplateRenderer;
     private final UserFilterManager userFilterManager;
 
-    public PeopleSelect(CustomFieldValuePersister customFieldValuePersister, GenericConfigManager genericConfigManager, MultiUserConverter multiUserConverter, ApplicationProperties applicationProperties, JiraAuthenticationContext authenticationContext, UserSearchService searchService, FieldVisibilityManager fieldVisibilityManager, JiraBaseUrls jiraBaseUrls, UserBeanFactory userBeanFactory, GroupManager groupManager, ProjectRoleManager projectRoleManager, SoyTemplateRendererProvider soyTemplateRendererProvider, UserFilterManager userFilterManager) {
+    public PeopleSelect(CustomFieldValuePersister customFieldValuePersister, GenericConfigManager genericConfigManager, @Qualifier("multiUserConverter") MultiUserConverter multiUserConverter, ApplicationProperties applicationProperties, JiraAuthenticationContext authenticationContext, UserSearchService searchService, FieldVisibilityManager fieldVisibilityManager, JiraBaseUrls jiraBaseUrls, UserBeanFactory userBeanFactory, GroupManager groupManager, ProjectRoleManager projectRoleManager, SoyTemplateRendererProvider soyTemplateRendererProvider, UserFilterManager userFilterManager) {
         super(customFieldValuePersister, genericConfigManager, multiUserConverter, applicationProperties, authenticationContext, searchService, fieldVisibilityManager, jiraBaseUrls, userBeanFactory);
         this.groupManager = groupManager;
         this.projectRoleManager = projectRoleManager;
