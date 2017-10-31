@@ -20,7 +20,7 @@
 
         <context>people-select</context>
     </web-resource>
-    <customfield-type key="peopleselect" name="Custom Multi Users Select" class="com.baitian.tech.PeopleSelect">
+    <customfield-type key="peopleselect" name="Multi Users Select with Filter" class="com.baitian.tech.PeopleSelect">
         <resource type="download" name="customfieldpreview.png" location="/images/customfieldpreview/userpicker.png">
             <param name="source" value="webContextStatic"/>
         </resource>
