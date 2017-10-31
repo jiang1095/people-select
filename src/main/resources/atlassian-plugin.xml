@@ -20,24 +20,20 @@
 
         <context>people-select</context>
     </web-resource>
-    <customfield-type key="com.baioo.tech.peopleselect" name="Custom Multi Users Select" class="com.baioo.tech.PeopleSelect">
+    <customfield-type key="peopleselect" name="Custom Multi Users Select" class="com.baitian.tech.PeopleSelect">
         <resource type="download" name="customfieldpreview.png" location="/images/customfieldpreview/userpicker.png">
             <param name="source" value="webContextStatic"/>
         </resource>
         <resource type="velocity" name="view" location="templates/plugins/fields/view/view-multiuser.vm" />
         <resource type="velocity" name="edit" location="templates/people-picker-edit.vm" />
-        <!--<resource type="velocity" name="edit" location="templates/plugins/fields/edit/edit-multiuser.vm"/>-->
         <resource type="velocity" name="xml" location="templates/plugins/fields/xml/xml-multiuser.vm" />
         <resource type="velocity" name="column-view" location="templates/plugins/fields/view/column-view-multiuser.vm"/>
     </customfield-type>
-    <customfield-searcher key="peopleselectsearcher" name="User Picker &amp; Group Searcher"
-                          class="com.baioo.tech.PeopleSelectSearcher">
+    <customfield-searcher key="peopleselectsearcher" name="User Picker &amp; Group Searcher" class="com.baitian.tech.PeopleSelectSearcher">
         <description key="admin.customfield.searcher.userpickergroupsearcher.desc">Allow to search for a user using a userpicker or a list of users groups.</description>
 
         <resource type="velocity" name="search" location="templates/plugins/fields/edit-searcher/search-groupdropdown.vm" />
-        <resource type="velocity" name="label"
-                  location="templates/plugins/fields/view-searcher/label-searcher-user.vm"/>
-
-        <valid-customfield-type key="com.baioo.tech.peopleselect" />
+        <resource type="velocity" name="label" location="templates/plugins/fields/view-searcher/label-searcher-user.vm"/>
+        <valid-customfield-type key="peopleselect" />
     </customfield-searcher>
 </atlassian-plugin>

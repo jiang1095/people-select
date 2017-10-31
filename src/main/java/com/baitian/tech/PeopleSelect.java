@@ -1,4 +1,4 @@
-package com.baioo.tech;
+package com.baitian.tech;
 
 import com.atlassian.jira.bc.user.search.UserSearchService;
 import com.atlassian.jira.config.properties.ApplicationProperties;
@@ -36,7 +36,7 @@ public class PeopleSelect extends MultiUserCFType {
     private final SoyTemplateRenderer soyTemplateRenderer;
     private final UserFilterManager userFilterManager;
 
-    public PeopleSelect(CustomFieldValuePersister customFieldValuePersister, GenericConfigManager genericConfigManager, @Qualifier("multiUserConverter") MultiUserConverter multiUserConverter, ApplicationProperties applicationProperties, JiraAuthenticationContext authenticationContext, UserSearchService searchService, FieldVisibilityManager fieldVisibilityManager, JiraBaseUrls jiraBaseUrls, UserBeanFactory userBeanFactory, GroupManager groupManager, ProjectRoleManager projectRoleManager, SoyTemplateRendererProvider soyTemplateRendererProvider, UserFilterManager userFilterManager) {
+    public PeopleSelect(CustomFieldValuePersister customFieldValuePersister, GenericConfigManager genericConfigManager, MultiUserConverter multiUserConverter, ApplicationProperties applicationProperties, JiraAuthenticationContext authenticationContext, UserSearchService searchService, FieldVisibilityManager fieldVisibilityManager, JiraBaseUrls jiraBaseUrls, UserBeanFactory userBeanFactory, GroupManager groupManager, ProjectRoleManager projectRoleManager, SoyTemplateRendererProvider soyTemplateRendererProvider, UserFilterManager userFilterManager) {
         super(customFieldValuePersister, genericConfigManager, multiUserConverter, applicationProperties, authenticationContext, searchService, fieldVisibilityManager, jiraBaseUrls, userBeanFactory);
         this.groupManager = groupManager;
         this.projectRoleManager = projectRoleManager;

@@ -1,4 +1,4 @@
-package com.baioo.tech;
+package com.baitian.tech;
 
 import com.atlassian.jira.bc.user.search.UserSearchService;
 import com.atlassian.jira.config.properties.ApplicationProperties;
@@ -19,7 +19,7 @@ import com.atlassian.jira.util.velocity.VelocityRequestContextFactory;
 import com.atlassian.jira.web.FieldVisibilityManager;
 import org.springframework.beans.factory.annotation.Qualifier;
 
-public class PeopleSelectSearcher extends UserPickerGroupSearcher{
+public class PeopleSelectSearcher extends UserPickerGroupSearcher {
     public PeopleSelectSearcher(@Qualifier("userConverter") UserConverter userConverter, JiraAuthenticationContext jiraAuthenticationContext, VelocityRequestContextFactory velocityRequestContextFactory, VelocityTemplatingEngine templatingEngine, ApplicationProperties applicationProperties, UserSearchService userSearchService, FieldVisibilityManager fieldVisibilityManager, JqlOperandResolver jqlOperandResolver, UserResolver userResolver, UserManager userManager, CustomFieldInputHelper customFieldInputHelper, GroupManager groupManager, PermissionManager permissionManager, UserHistoryManager userHistoryManager, UserFilterManager userFilterManager, EmailFormatter emailFormatter) {
         super(userConverter, jiraAuthenticationContext, velocityRequestContextFactory, templatingEngine, applicationProperties, userSearchService, fieldVisibilityManager, jqlOperandResolver, userResolver, userManager, customFieldInputHelper, groupManager, permissionManager, userHistoryManager, userFilterManager, emailFormatter);
     }
